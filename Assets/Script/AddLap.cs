@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class AddLap : MonoBehaviour
     [SerializeField] public Text ToStringLaps;
     [SerializeField] private string TagLaps;
     [SerializeField] private string TagCheckPoint;
+    // private LapPlayer _playerLap;
     
     public bool CheckPoint;
     
@@ -30,4 +32,19 @@ public class AddLap : MonoBehaviour
             CheckPoint = true;
         }
     }
+
+    // private void Start()
+    // {
+    //     _playerLap = FindAnyObjectByType<LapPlayer>();
+    // }
+
+    // private void Update()
+    // {
+    //     if (_playerLap.LapsPlayerOne >= 3 || _playerLap.LapsPlayerTwo >= 3)
+    //     {
+    //         _playerLap.LapsPlayerOne = 0;
+    //         _playerLap.LapsPlayerTwo = 0;
+    //         Destroy(gameObject);
+    //     }
+    // }
 }

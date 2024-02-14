@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class LapPlayer : MonoBehaviour
 {
-    [SerializeField] private int LapsPlayerOne;
-    [SerializeField] private int LapsPlayerTwo;
+    [SerializeField] public int LapsPlayerOne;
+    [SerializeField] public int LapsPlayerTwo;
     [SerializeField] private GameObject Game;
     [SerializeField] private GameObject WinUI;
     [SerializeField] private Text WinPlayer;
@@ -15,6 +15,8 @@ public class LapPlayer : MonoBehaviour
     [SerializeField] public AddLap _addLapPlayerTwo;
     [SerializeField] private AudioSource _GameSong;
     [SerializeField] public bool _lapCheck;
+    [SerializeField] private GameObject _TextPlayer1;
+    [SerializeField] private GameObject _TextPlayer2;
     
     private bool CheckpointPlayerOne;
     private bool CheckpointPlayerTwo;
@@ -57,6 +59,8 @@ public class LapPlayer : MonoBehaviour
         if (LapsPlayerOne >= 3)
         {
             WinUI.SetActive(true);
+            // _TextPlayer1.SetActive(true);
+            // _TextPlayer2.SetActive(true);
             _GameSong.Stop();
             WinPlayer.text = "Player 1";
             Game.SetActive(false);
@@ -64,6 +68,8 @@ public class LapPlayer : MonoBehaviour
         if (LapsPlayerTwo >= 3)
         {
             WinUI.SetActive(true);
+            // _TextPlayer1.SetActive(true);
+            // _TextPlayer2.SetActive(true);
             _GameSong.Stop();
             WinPlayer.text = "Player 2";
             Game.SetActive(false);

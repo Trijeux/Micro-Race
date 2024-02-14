@@ -12,7 +12,7 @@ public class CarChoice : MonoBehaviour
     [SerializeField] private LapPlayer _Lap;
     [SerializeField] private GameObject _Player;
     [SerializeField] private Text _TextPLayerOne;
-    private bool ChoseGood;
+    public bool ChoseGood;
    
     void Update()
     {
@@ -48,10 +48,5 @@ public class CarChoice : MonoBehaviour
             Car.GetComponent<AddLap>().ToStringLaps = _TextPLayerOne;
             ChoseGood = true;
         }
-        /*if (ChoseGood)
-        {
-            gameObject.SetActive(false);
-        }*/
-
     }
 }

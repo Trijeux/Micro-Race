@@ -5,32 +5,32 @@ public class ChoseCarPlayerOne : MonoBehaviour
 {
     [SerializeField] private StarterAssetsInputsOne _inputs;
     [SerializeField] private GameObject ChosePlayerTwo;
-    private bool ChoseGood;
+    public bool ChoseGoodOne;
 
    
     void Update()
     {
-            if (_inputs.CarChose.x <= -1 && !ChoseGood)
+            if (_inputs.CarChose.x <= -1 && !ChoseGoodOne)
             {
-                ChoseGood = true;
+                ChoseGoodOne = true;
             }
 
-            if (_inputs.CarChose.y <= -1 && !ChoseGood)
+            if (_inputs.CarChose.y <= -1 && !ChoseGoodOne)
             {
-                ChoseGood = true;
+                ChoseGoodOne = true;
             }
 
-            if (_inputs.CarChose.x >= 1 && !ChoseGood)
+            if (_inputs.CarChose.x >= 1 && !ChoseGoodOne)
             {
-                ChoseGood = true;
+                ChoseGoodOne = true;
             }
 
-            if (_inputs.CarChose.y >= 1 && !ChoseGood)
+            if (_inputs.CarChose.y >= 1 && !ChoseGoodOne)
             {
-                ChoseGood = true;
+                ChoseGoodOne = true;
             }
 
-            if (ChoseGood)
+            if (ChoseGoodOne)
             {
                 ChosePlayerTwo.SetActive(true);
                 gameObject.SetActive(false);

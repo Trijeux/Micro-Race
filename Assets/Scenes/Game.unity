@@ -2390,6 +2390,8 @@ MonoBehaviour:
   game: {fileID: 70625361}
   ChoseCarPlayer: {fileID: 1045453658}
   _hubAudio: {fileID: 1514631110}
+  _ChosePlayerOne: {fileID: 449667047}
+  ChoseGoodTwo: 0
 --- !u!114 &246026483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4019,6 +4021,7 @@ MonoBehaviour:
   CarChose: {x: 0, y: 0}
   ExitEndGame: 0
   _IsOn: 0
+  Restart: 0
 --- !u!114 &449667052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4033,6 +4036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputs: {fileID: 449667051}
   ChosePlayerTwo: {fileID: 246026480}
+  ChoseGoodOne: 0
 --- !u!1001 &451540664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10998,6 +11002,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputs: {fileID: 1491294299}
+  _winAudio: {fileID: 930126674}
+  _HubAudio: {fileID: 1514631110}
+  _WinUI: {fileID: 930126669}
+  _ChoseCarUI: {fileID: 1045453658}
+  _carChoiceOne: {fileID: 1862193361}
+  _carChoiceTwo: {fileID: 1604801593}
+  _carOne: {fileID: 449667052}
+  _carTwo: {fileID: 246026482}
 --- !u!114 &1491294299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11017,6 +11029,7 @@ MonoBehaviour:
   CarChose: {x: 0, y: 0}
   ExitEndGame: 0
   _IsOn: 0
+  Restart: 0
 --- !u!114 &1491294300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12087,6 +12100,8 @@ MonoBehaviour:
   _Player: {fileID: 1604801589}
   _TextPLayerTwo: {fileID: 1074872783}
   _Lap: {fileID: 2024611355}
+  _addLap: {fileID: 0}
+  ChoseGood: 0
 --- !u!4 &1605179430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6069773055420353333, guid: 9f9cd54077faf65438d05b189cdde7f5,
@@ -13734,6 +13749,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7786dd826bd2954e84ed27292b73c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1862193361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1323730761803531133, guid: 5885de48ebf13754db2c2d5dc8d93d34,
+    type: 3}
+  m_PrefabInstance: {fileID: 6664730770933729673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2105e5c0ee3d0342b1913f96e313fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1862958849 stripped
@@ -15397,6 +15424,8 @@ MonoBehaviour:
   _addLapPlayerTwo: {fileID: 0}
   _GameSong: {fileID: 70625364}
   _lapCheck: 0
+  _TextPlayer1: {fileID: 207147540}
+  _TextPlayer2: {fileID: 1375737368}
 --- !u!1 &2027649353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d922b0444e48f644fa5b1871459f2346,
@@ -15844,6 +15873,7 @@ MonoBehaviour:
   CarChose: {x: 0, y: 0}
   ExitEndGame: 0
   _IsOn: 0
+  Restart: 0
 --- !u!114 &2117976685
 MonoBehaviour:
   m_ObjectHideFlags: 0

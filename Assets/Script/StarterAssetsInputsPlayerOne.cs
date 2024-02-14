@@ -14,6 +14,7 @@ namespace StarterAssets
 		public Vector2 CarChose;
 		public float ExitEndGame;
 		public bool _IsOn = false;
+		public float Restart;
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnRoll(InputValue value)
@@ -51,6 +52,11 @@ namespace StarterAssets
 		{
 			ExitEndGameInput(value.Get<float>());
 		}
+
+		public void OnRestart(InputValue value)
+		{
+			RestartInput(value.Get<float>());
+		}
 #endif
 		public void MoveInput(float newRollDirection)
 		{
@@ -79,6 +85,11 @@ namespace StarterAssets
 		public void ExitEndGameInput(float newExitEndGame)
 		{
 			ExitEndGame = newExitEndGame;
+		}
+
+		public void RestartInput(float newrestart)
+		{
+			Restart = newrestart;
 		}
 	}
 	

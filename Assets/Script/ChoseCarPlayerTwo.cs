@@ -7,36 +7,39 @@ public class ChoseCarPlayerTwo : MonoBehaviour
     [SerializeField] private GameObject game;
     [SerializeField] private GameObject ChoseCarPlayer;
     [SerializeField] private AudioSource _hubAudio;
-    private bool ChoseGood;
+    [SerializeField] private GameObject _ChosePlayerOne;
+    public bool ChoseGoodTwo;
     
     
     void Update()
     {
-        if (_inputs.CarChose.x <= -1 && !ChoseGood)
+        if (_inputs.CarChose.x <= -1 && !ChoseGoodTwo)
         {
-            ChoseGood = true;
+            ChoseGoodTwo = true;
         }
 
-        if (_inputs.CarChose.y <= -1 && !ChoseGood)
+        if (_inputs.CarChose.y <= -1 && !ChoseGoodTwo)
         {
-            ChoseGood = true;
+            ChoseGoodTwo = true;
         }
 
-        if (_inputs.CarChose.x >= 1 && !ChoseGood)
+        if (_inputs.CarChose.x >= 1 && !ChoseGoodTwo)
         {
-            ChoseGood = true;
+            ChoseGoodTwo = true;
         }
 
-        if (_inputs.CarChose.y >= 1 && !ChoseGood)
+        if (_inputs.CarChose.y >= 1 && !ChoseGoodTwo)
         {
-            ChoseGood = true;
+            ChoseGoodTwo = true;
         }
 
-        if (ChoseGood)
+        if (ChoseGoodTwo)
         {
             game.SetActive(true);
             _hubAudio.Stop();
             ChoseCarPlayer.SetActive(false);
+            // _ChosePlayerOne.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
