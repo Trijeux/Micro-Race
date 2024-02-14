@@ -11,6 +11,8 @@ public class Deconte : MonoBehaviour
     [SerializeField] private StarterAssetsInputsOne _PlayerOneScript;
     [SerializeField] private StarterAssetsInputsPlayerTwo _PlayerTwoScript;
     [SerializeField] private GameObject decontGameObject;
+    [SerializeField] private GameObject TextPlayerOne;
+    [SerializeField] private GameObject TextPlayerTwo;
     private bool activate;
     
     // Start is called before the first frame update
@@ -28,6 +30,8 @@ public class Deconte : MonoBehaviour
             _PlayerTwoScript._IsOn = true;
             decontEnd.SetActive(false);
             decontGameObject.SetActive(false);
+            TextPlayerOne.SetActive(false);
+            TextPlayerTwo.SetActive(false);
             activate = true;
         }
     }

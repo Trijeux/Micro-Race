@@ -59,9 +59,9 @@ public class Bonus : MonoBehaviour
 
         if (_lap._lapCheck)
         {
-            
             _bonusRender.SetActive(true);
             Check = false;
+            _lap._lapCheck = false;
         }
     }
 
