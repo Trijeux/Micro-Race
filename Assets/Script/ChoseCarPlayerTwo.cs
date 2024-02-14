@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChoseCarPlayerTwo : MonoBehaviour
 {
-    [SerializeField] private StarterAssetsInputsPlayerTwo _inputs;
+    [SerializeField] public StarterAssetsInputsPlayerTwo _inputs;
     [SerializeField] private GameObject game;
     [SerializeField] private GameObject ChoseCarPlayer;
     [SerializeField] private AudioSource _hubAudio;
@@ -38,7 +38,7 @@ public class ChoseCarPlayerTwo : MonoBehaviour
             game.SetActive(true);
             _hubAudio.Stop();
             ChoseCarPlayer.SetActive(false);
-            // _ChosePlayerOne.SetActive(true);
+            _ChosePlayerOne.SetActive(true);
             gameObject.SetActive(false);
         }
     }

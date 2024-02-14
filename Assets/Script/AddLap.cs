@@ -32,19 +32,4 @@ public class AddLap : MonoBehaviour
             CheckPoint = true;
         }
     }
-
-    // private void Start()
-    // {
-    //     _playerLap = FindAnyObjectByType<LapPlayer>();
-    // }
-
-    // private void Update()
-    // {
-    //     if (_playerLap.LapsPlayerOne >= 3 || _playerLap.LapsPlayerTwo >= 3)
-    //     {
-    //         _playerLap.LapsPlayerOne = 0;
-    //         _playerLap.LapsPlayerTwo = 0;
-    //         Destroy(gameObject);
-    //     }
-    // }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChoseCarPlayerOne : MonoBehaviour
 {
-    [SerializeField] private StarterAssetsInputsOne _inputs;
+    [SerializeField] public StarterAssetsInputsOne _inputs;
     [SerializeField] private GameObject ChosePlayerTwo;
     public bool ChoseGoodOne;
 
@@ -28,6 +28,7 @@ public class ChoseCarPlayerOne : MonoBehaviour
             if (_inputs.CarChose.y >= 1 && !ChoseGoodOne)
             {
                 ChoseGoodOne = true;
+                
             }
 
             if (ChoseGoodOne)

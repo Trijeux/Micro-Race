@@ -8,7 +8,7 @@ public class CarChoice : MonoBehaviour
     [SerializeField] private GameObject _CarVan;
     [SerializeField] private GameObject _CarPolice;
     [SerializeField] private GameObject _CarRace;
-    [SerializeField] private StarterAssetsInputsOne _inputs;
+    [SerializeField] public StarterAssetsInputsOne _inputs;
     [SerializeField] private LapPlayer _Lap;
     [SerializeField] private GameObject _Player;
     [SerializeField] private Text _TextPLayerOne;

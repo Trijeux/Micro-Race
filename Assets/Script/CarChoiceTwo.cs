@@ -8,11 +8,10 @@ public class CarChoiceTwo : MonoBehaviour
     [SerializeField] private GameObject _CarVan;
     [SerializeField] private GameObject _CarPolice;
     [SerializeField] private GameObject _CarRace;
-    [SerializeField] private StarterAssetsInputsPlayerTwo _inputs;
+    [SerializeField] public StarterAssetsInputsPlayerTwo _inputs;
     [SerializeField] private GameObject _Player;
     [SerializeField] private Text _TextPLayerTwo;
     [SerializeField] private LapPlayer _Lap;
-    [SerializeField] private AddLap _addLap;
     public bool ChoseGood;
 
     void Update()
@@ -49,6 +48,5 @@ public class CarChoiceTwo : MonoBehaviour
             _Lap._addLapPlayerTwo = Car.GetComponent<AddLap>();
             ChoseGood = true;
         }
-
     }
 }

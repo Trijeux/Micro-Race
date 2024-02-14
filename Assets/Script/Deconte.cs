@@ -14,7 +14,6 @@ public class Deconte : MonoBehaviour
     [SerializeField] private GameObject TextPlayerOne;
     [SerializeField] private GameObject TextPlayerTwo;
     private bool activate;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +33,7 @@ public class Deconte : MonoBehaviour
             TextPlayerTwo.SetActive(false);
             activate = true;
         }
+
     }
 
     IEnumerator DeconteActive()

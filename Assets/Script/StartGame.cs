@@ -12,6 +12,7 @@ public class StartGameScript : MonoBehaviour
         {
             ChoseCar.SetActive(true);
             gameObject.SetActive(false);
+            _inputs.StartGame = 0;
         }
 
         if (_inputs.ExitGame >= 0.1)
@@ -21,7 +22,6 @@ public class StartGameScript : MonoBehaviour
 #else
             Application.Quit();
 #endif
-            
         }
     }
 }
