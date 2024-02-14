@@ -26,7 +26,10 @@ namespace StarterAssets
 
 		public void OnTurn(InputValue value)
 		{
-			TurnInput(value.Get<float>());
+			if (_IsOn)
+			{
+				TurnInput(value.Get<float>());
+			}
 		}
 		
 		public void OnStart(InputValue value)

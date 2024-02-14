@@ -6,6 +6,7 @@ public class ChoseCarPlayerTwo : MonoBehaviour
     [SerializeField] private StarterAssetsInputsPlayerTwo _inputs;
     [SerializeField] private GameObject game;
     [SerializeField] private GameObject ChoseCarPlayer;
+    [SerializeField] private AudioSource _hubAudio;
     private bool ChoseGood;
     
     
@@ -34,6 +35,7 @@ public class ChoseCarPlayerTwo : MonoBehaviour
         if (ChoseGood)
         {
             game.SetActive(true);
+            _hubAudio.Stop();
             ChoseCarPlayer.SetActive(false);
         }
     }

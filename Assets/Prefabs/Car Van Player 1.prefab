@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 7490773429698966210, guid: 515df5e53c1bcf24685fa6891aea594f,
         type: 3}
       propertyPath: m_Name
-      value: Car Van
+      value: Car Van Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 7836054528176973944, guid: 515df5e53c1bcf24685fa6891aea594f,
         type: 3}
@@ -338,6 +338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxReverseSpeed
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8006643441179624279, guid: 515df5e53c1bcf24685fa6891aea594f,
+        type: 3}
+      propertyPath: accelerationMultiplier
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9127343521556478706, guid: 515df5e53c1bcf24685fa6891aea594f,
         type: 3}

@@ -16,23 +16,23 @@ public class Deconte : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Active");
+        StartCoroutine("DeconteActive");
     }
 
     private void Update()
     {
         if (NumbDown <= 0 && !activate)
         {
-            StopCoroutine("Active");
+            StopCoroutine("DeconteActive");
             _PlayerOneScript._IsOn = true;
             _PlayerTwoScript._IsOn = true;
             decontEnd.SetActive(false);
-            activate = true;
             decontGameObject.SetActive(false);
+            activate = true;
         }
     }
 
-    IEnumerator Active()
+    IEnumerator DeconteActive()
     {
         NumbDown = 6;
         for (int CountDown = 0; CountDown < 6; CountDown++)

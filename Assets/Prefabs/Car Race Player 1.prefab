@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 3684366496648320574, guid: 63c9d015f745748498900acc9a7cdb83,
         type: 3}
       propertyPath: accelerationMultiplier
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3684366496648320574, guid: 63c9d015f745748498900acc9a7cdb83,
         type: 3}
@@ -404,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 4307871955535521707, guid: 63c9d015f745748498900acc9a7cdb83,
         type: 3}
       propertyPath: m_Name
-      value: Car Race
+      value: Car Race Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 7490927660025787672, guid: 63c9d015f745748498900acc9a7cdb83,
         type: 3}

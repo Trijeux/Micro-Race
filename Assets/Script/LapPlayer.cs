@@ -13,6 +13,8 @@ public class LapPlayer : MonoBehaviour
     [SerializeField] private String PlayerTwo;
     [SerializeField] public AddLap _addLapPlayerOne;
     [SerializeField] public AddLap _addLapPlayerTwo;
+    [SerializeField] private AudioSource _GameSong;
+    [SerializeField] public bool _lapCheck;
     
     private bool CheckpointPlayerOne;
     private bool CheckpointPlayerTwo;
@@ -24,6 +26,7 @@ public class LapPlayer : MonoBehaviour
             if (collision.CompareTag(PlayerOne))
             {
                 LapsPlayerOne += 1;
+                _lapCheck = true;
                 CheckpointPlayerOne = false;
             }
         }
@@ -33,6 +36,7 @@ public class LapPlayer : MonoBehaviour
             if (collision.CompareTag(PlayerTwo))
             {
                 LapsPlayerTwo += 1;
+                _lapCheck = true;
                 CheckpointPlayerTwo = false;
             }
         }
@@ -53,12 +57,14 @@ public class LapPlayer : MonoBehaviour
         if (LapsPlayerOne >= 3)
         {
             WinUI.SetActive(true);
+            _GameSong.Stop();
             WinPlayer.text = "Player 1";
             Game.SetActive(false);
         }
         if (LapsPlayerTwo >= 3)
         {
             WinUI.SetActive(true);
+            _GameSong.Stop();
             WinPlayer.text = "Player 2";
             Game.SetActive(false);
         }

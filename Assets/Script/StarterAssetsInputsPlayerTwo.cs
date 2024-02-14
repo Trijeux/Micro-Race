@@ -11,7 +11,7 @@ namespace StarterAssets
         public float Turn;
         public Vector2 CarChose;
         public bool _IsOn = false;
-        
+
 
 #if ENABLE_INPUT_SYSTEM
         public void OnRoll(InputValue value)
@@ -24,7 +24,10 @@ namespace StarterAssets
 
         public void OnTurn(InputValue value)
         {
-            TurnInput(value.Get<float>());
+            if (_IsOn)
+            {
+                TurnInput(value.Get<float>());
+            }
         }
 
         public void OnCar(InputValue value)
@@ -32,7 +35,7 @@ namespace StarterAssets
             ChoseCarInput(value.Get<Vector2>());
         }
 
-        
+
 #endif
         public void MoveInput(float newRollDirection)
         {
