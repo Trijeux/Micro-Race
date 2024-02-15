@@ -13,6 +13,8 @@ public class Deconte : MonoBehaviour
     [SerializeField] private GameObject decontGameObject;
     [SerializeField] private GameObject TextPlayerOne;
     [SerializeField] private GameObject TextPlayerTwo;
+    [SerializeField] private GameObject ControleManette;
+    [SerializeField] private GameObject ContolreKeybord;
     private bool activate;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,12 @@ public class Deconte : MonoBehaviour
 
     private void Update()
     {
+        if (NumbDown <= 5)
+        {
+            ControleManette.SetActive(false);
+            ContolreKeybord.SetActive(false);
+        }
+        
         if (NumbDown <= 0 && !activate)
         {
             StopCoroutine("DeconteActive");
@@ -38,8 +46,8 @@ public class Deconte : MonoBehaviour
 
     IEnumerator DeconteActive()
     {
-        NumbDown = 6;
-        for (int CountDown = 0; CountDown < 6; CountDown++)
+        NumbDown = 12;
+        for (int CountDown = 0; CountDown < 12; CountDown++)
         {
             NumbDown -= 1;
             decontText.text = NumbDown.ToString();
